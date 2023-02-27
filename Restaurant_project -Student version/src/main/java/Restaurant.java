@@ -19,11 +19,11 @@ public class Restaurant {
 
     public boolean isRestaurantOpen() {
 
-        return getCurrentTime().isBefore(closingTime)&& getCurrentTime().isAfter(openingTime);
+        return getCurrentRestaurantTime().isBefore(closingTime)&& getCurrentRestaurantTime().isAfter(openingTime);
         
     }
 
-    public LocalTime getCurrentTime(){ return  LocalTime.now(); }
+    public LocalTime getCurrentRestaurantTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
         return menu;
